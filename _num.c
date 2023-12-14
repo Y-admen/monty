@@ -1,4 +1,4 @@
-#include <monty.h>
+#include "monty.h"
 
 int _num(const char *i)
 {

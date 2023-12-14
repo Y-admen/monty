@@ -1,4 +1,4 @@
-#include <monty.h>
+#include "monty.h"
 
 /**
  * _pop -  pop
@@ -12,7 +12,7 @@ void _pop(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	stack_t *top = *stack;
+	stack_t *top;
 	*stack = top->next;
 
 	if (*stack)

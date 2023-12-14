@@ -1,5 +1,5 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef DATA_STRUCTURES_H
+#define DATA_STRUCTURES_H
 
 #include <stdio.h>
 #include <stdlib.h>

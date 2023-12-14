@@ -1,4 +1,4 @@
-#include <monty.h>
+#include "monty.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	fprintf(stderr, "USAGE: %s file\n", argv[0]);
 	return EXIT_FAILURE;
 	}
-	file = fopen(argv[1], "r");
+	file = fopen(filename, "r");
 	if (!file)
 	{
 	fprintf(stderr, "Error: Can't open file %s\n", filename);
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 		}
-	_push(&stack, value, line_number);
+	_push(&stack, val, line_number);
 	}
 	else if (strcmp(opcode, "_pall") == 0)
 		{
