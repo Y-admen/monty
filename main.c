@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
 	char *opcode;
 	char *arg;
 	int val;
-	stack_t *place;
 
 	if (argc != 2)
 	{
@@ -46,12 +45,27 @@ int main(int argc, char *argv[])
 	}
 	else if (strcmp(opcode, "_pall") == 0)
 		{
-		place = stack;
-		while (place)
-			{
-				printf("%d\n", place->n);
-				place = place->next;
-			}
+		_pall(stack, line_number);
+		}
+	else if (strcmp(opcode, "_pint") == 0)
+		{
+		_pint(stack, line_number);
+		}
+	else if (strcmp(opcode, "_pop") == 0)
+		{
+		_pop(stack, line_number);
+		}
+	else if (strcmp(opcode, "_swap") == 0)
+		{
+		_swap(stack, line_number);
+		}
+	else if (strcmp(opcode, "_add") == 0)
+		{
+		_add(stack, line_number);
+		}
+	else if (strcmp(opcode, "_nop") == 0)
+		{
+		_nop(stack, line_number);
 		}
 	else
 		{

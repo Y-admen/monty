@@ -6,7 +6,7 @@
  * @line_number: number of line opcode occurs on
 */
 
-void pall_(stack_t **top, __attribute__ ((unused))unsigned int line_number)
+void _pall(stack_t **top, __attribute__ ((unused))unsigned int line_number)
 {
 	stack_t *itirator;
 
