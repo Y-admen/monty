@@ -6,11 +6,11 @@
  * @line_number: number of line opcode occurs on
 */
 
-void pall_(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
+void pall_(stack_t **top, __attribute__ ((unused))unsigned int line_number)
 {
 	stack_t *itirator;
 
-	itirator = *stack;
+	itirator = *top;
 	while (itirator != NULL)
 	{
 		printf("%d\n", itirator->n);
