@@ -19,7 +19,7 @@ void _push(stack_t **top, unsigned int line_number, char *arg)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
