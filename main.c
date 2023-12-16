@@ -3,12 +3,11 @@
 int main(int argc, char *argv[])
 {
 	FILE *file;
-	stack_t *stack = NULL;
+	stack_t **stack = NULL;
 	char line[MAX_LEN];
 	unsigned int line_number = 0;
 	char *opcode;
 	char *arg;
-	int val;
 
 	if (argc != 2)
 	{
@@ -30,10 +29,6 @@ int main(int argc, char *argv[])
 	continue;
 	}
 	arg = strtok(NULL, " \t\n");
-	if (arg)
-	{
-	val = atoi(arg);
-	}
 	if (strcmp(opcode, "_push") == 0)
 	{
 	if (!arg || !_num(arg))
@@ -41,7 +36,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 		}
-	_push(&stack, val, line_number);
+	_push(stack, line_number, arg);
 	}
 	else if (strcmp(opcode, "_pall") == 0)
 		{
