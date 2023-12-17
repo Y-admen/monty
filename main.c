@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
 	unsigned int line_number = 0;
 	char *opcode;
 	char *arg;
+	char filename[] = "test.txt";
 
 	if (argc != 2)
 	{
